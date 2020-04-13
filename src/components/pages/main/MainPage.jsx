@@ -1,7 +1,9 @@
 import React from "react";
 import "./MainPage.css";
+import 'react-bulma-components/dist/react-bulma-components.min.css';
 import PokemonListContainer from './components/PokemonListContainer'
 import DropdownMenu from '../../common/menu/DropdownMenu'
+
 const MainPage = props => {
   return (
     <div className="main-page">
@@ -12,12 +14,14 @@ const MainPage = props => {
       <div className='title-container'>
       <h1>Pokedex 1.0</h1>
       <h2>View a list of pokemon and their details.</h2>
-    
+
       </div>
       <div className='filter-container'>
       <h2>Filter By:</h2>
       <DropdownMenu
-        options={[{text: 'Metal', callback: ()=>{console.log('callback executed')}}, {text: 'Dark', callback: ()=>console.log('option2')}]}
+        options={[
+          {text: 'Metal', callback: ()=>{console.log('callback executed')}},
+          {text: 'Dark', callback: ()=>console.log('option2')}]}
       />
       </div>
     <PokemonListContainer/>
