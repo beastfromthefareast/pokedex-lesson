@@ -6,9 +6,11 @@ import Card from '../../../common/card/Card'
 const PokemonListView = (props) => {
   return (
     <ul>
-      <FlatList
-        renderItem={() => <Card />}
-      />
+      {
+        props.pokemonList.map(p=>(<li>
+          {p.name}
+        </li>))
+      }
     </ul>
   )
 }
